@@ -29,9 +29,8 @@ spec:
       - matchExpressions:
         - key: kubernetes.io/hostname
           operator: In
-          values:
-          - worker-node01
-
+          values: # Note: Replace with any one of your cluster worker nodes hostname; use `kubectl get nodes`
+          - minikube
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
